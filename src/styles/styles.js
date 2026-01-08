@@ -10,6 +10,24 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
   padding: 20px;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.05s;
+  opacity: 0;
+
+
+  @keyframes fadeIn {
+    0%{
+      overflow-y: hidden !important;
+      opacity: 0;
+
+    }
+
+    100%{
+      overflow-y: visible !important;
+      opacity: 1;
+  
+    }
+  }
 
   .img-container{
     width: 100%;
@@ -22,10 +40,32 @@ export const Container = styled.div`
       width: 240px;
       height: auto;
       border-radius: 8px;
+      transform: translateY(20px);
       box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
- 
       object-fit: cover;
+      animation: imageFadeIn .5s forwards;
+      animation-delay: calc(0.4s * var(--index));
+      opacity: 0;
     }
+    
+    img:nth-child(1) { --index: 1; }
+    img:nth-child(2) { --index: 2; }
+    img:nth-child(3) { --index: 3; }
+    img:nth-child(4) { --index: 4; }
+    img:nth-child(5) { --index: 5; }
+    img:nth-child(6) { --index: 6; }
+    img:nth-child(7) { --index: 7; }
+    img:nth-child(8) { --index: 8; }
+    img:nth-child(9) { --index: 9; }
+    img:nth-child(10) { --index: 10; }
+    img:nth-child(n+11) { --index: 10; }
+
+    @keyframes imageFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
     @media (max-width: 1024px) {
       grid-template-columns: repeat(3, minmax(150px, 1fr));
@@ -42,10 +82,10 @@ export const Container = styled.div`
       }
     }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
       grid-template-columns: repeat(3, minmax(120px, 1fr));
-          img{
-      width: 180px;
+      img{
+        width: 180px;
       }
     }
      @media (max-width: 600px) {
@@ -56,7 +96,7 @@ export const Container = styled.div`
       }
     }
 
-         @media (max-width: 520px) {
+    @media (max-width: 520px) {
       grid-template-columns: repeat(2, minmax(200px, 1fr));
 
        img{
@@ -87,6 +127,7 @@ export const Container = styled.div`
       }
     }
 }
+
 `;
 
 export const BadgeStyles = styled.div`

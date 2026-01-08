@@ -37,10 +37,10 @@ export const Container = styled.div`
             
         }
         90%{
-            opacity: 0.9; 
+            opacity: 0.9;
         }
         100%{
-            opacity: 0;
+           opacity: 0;
             display: none;
         }
     }
