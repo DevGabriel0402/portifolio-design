@@ -70,6 +70,7 @@ function App() {
    
 
     <Container>
+      <div className="conteudo">
       <h1>Portifólio</h1>
       <div className="img-container">
         {imagens.map((imagem) => (
@@ -80,6 +81,7 @@ function App() {
             onLoad={handleImageLoad}
           />
         ))}
+      </div>
       </div>
       <BadgeStyles>
         <div className="container-img">

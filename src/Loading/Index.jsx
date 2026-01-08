@@ -8,7 +8,7 @@ const Loading = () => {
 export const Container = styled.div`
     position: fixed;
     margin: 0 auto;
-    background-color: #0b0b0bee;
+    background-color: transparent;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,8 +21,8 @@ export const Container = styled.div`
     opacity: 1;
     z-index: 9999;
     animation: fadeOut 3s forwards;
-    animation-delay: 1s;
-    backdrop-filter: blur(10px);
+
+
    
     img{
         width: 50px;

@@ -10,22 +10,26 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
   padding: 20px;
-  animation: fadeIn 1s forwards;
   animation-delay: 0.05s;
-  opacity: 0;
+ 
+
+  .conteudo{
+    filter: blur(20px);
+    animation: fadeIn 2s forwards;
+
+    h1{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
 
 
   @keyframes fadeIn {
     0%{
-      overflow-y: hidden !important;
-      opacity: 0;
-
+       filter: blur(20px);
     }
-
     100%{
-      overflow-y: visible !important;
-      opacity: 1;
-  
+       filter: blur(0px);
     }
   }
 
@@ -131,9 +135,9 @@ export const Container = styled.div`
 `;
 
 export const BadgeStyles = styled.div`
-  position: fixed;
+  position: fixed !important;
   opacity: 0;
-  z-index: 10;
+  z-index: 999;
   bottom: 20px;
   transform: translatey(20px);
   margin-inline: 20px;
@@ -148,8 +152,8 @@ export const BadgeStyles = styled.div`
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   background-color: #0b0b0b40;
   backdrop-filter: blur(10px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 3s;
+  animation: fadeInBadge 1s forwards;
+  animation-delay: 4s;
 
   .container-img{
     display: flex;
@@ -185,7 +189,7 @@ export const BadgeStyles = styled.div`
     margin-right: 12px;
   }
 
-  @keyframes fadeInUp {
+  @keyframes fadeInBadge {
   to{
     opacity: 1;
     transform: translateY(0px) ;
