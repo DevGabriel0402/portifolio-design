@@ -1,5 +1,8 @@
 import { Container, BadgeStyles } from "./styles/styles";
 import { RiWhatsappFill } from "react-icons/ri";
+import Loading from "./Loading/Index.jsx";
+
+
 
 import img01 from "@/assets/imagens/01.webp";
 import img02 from "@/assets/imagens/02.webp";
@@ -16,6 +19,8 @@ import img12 from "@/assets/imagens/12.webp";
 import perfil from "@/assets/imagens/perfil.JPG";
 
 function App() {
+
+
   const imagens = [
     { id: 1, src: img01, alt: "Imagem 1" },
     { id: 2, src: img02, alt: "Imagem 2" },
@@ -31,6 +36,10 @@ function App() {
     { id: 12, src: img12, alt: "Imagem 12" },
   ]
 
+  const handleImageLoad = () => {
+    setImagesLoaded(prev => prev + 1);
+  };
+
   const date = new Date();
   const hour = date.getHours();
   
@@ -38,7 +47,7 @@ function App() {
   const handleWhatsAppClick = () => {
     const boanoite = hour >= 18 || hour < 5;
     const boatarde = hour >= 12 && hour < 18;
-    const bomdia = hour >= 5 && hour < 12;
+
 
     let message;
     if (boanoite) {
@@ -53,17 +62,33 @@ function App() {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
+
+
+
+
   return (
+   
+
     <Container>
       <h1>Portifólio</h1>
       <div className="img-container">
         {imagens.map((imagem) => (
-          <img key={imagem.id} src={imagem.src} alt={imagem.alt} />
+          <img 
+            key={imagem.id} 
+            src={imagem.src} 
+            alt={imagem.alt}
+            onLoad={handleImageLoad}
+          />
         ))}
       </div>
       <BadgeStyles>
         <div className="container-img">
-          <img src={perfil} alt="Perfil" className="foto" />
+          <img 
+            src={perfil} 
+            alt="Perfil" 
+            className="foto"
+            onLoad={handleImageLoad}
+          />
           <p>Está precisando de artes de alta qualidade? Me chame pra gente bater um papo.</p>
         </div>
         <div className="info">
@@ -72,6 +97,7 @@ function App() {
         </div>
       </BadgeStyles>
     </Container>
+
   );
 }
 

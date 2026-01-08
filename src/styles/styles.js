@@ -108,7 +108,7 @@ export const BadgeStyles = styled.div`
   background-color: #0b0b0b40;
   backdrop-filter: blur(10px);
   animation: fadeInUp 1s forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
 
   .container-img{
     display: flex;
