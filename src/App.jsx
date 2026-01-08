@@ -1,19 +1,19 @@
 import { Container, BadgeStyles } from "./styles/styles";
 import { RiWhatsappFill } from "react-icons/ri";
 
-import img01 from "./assets/imagens/01.webp";
-import img02 from "./assets/imagens/02.webp";
-import img03 from "./assets/imagens/03.webp";
-import img04 from "./assets/imagens/04.webp";
-import img05 from "./assets/imagens/05.webp";
-import img06 from "./assets/imagens/06.webp";
-import img07 from "./assets/imagens/07.webp";
-import img08 from "./assets/imagens/08.webp";
-import img09 from "./assets/imagens/09.webp";
-import img10 from "./assets/imagens/10.webp";
-import img11 from "./assets/imagens/11.webp";
-import img12 from "./assets/imagens/12.webp";
-import perfil from "./assets/imagens/perfil.JPG";
+import img01 from "@/assets/imagens/01.webp";
+import img02 from "@/assets/imagens/02.webp";
+import img03 from "@/assets/imagens/03.webp";
+import img04 from "@/assets/imagens/04.webp";
+import img05 from "@/assets/imagens/05.webp";
+import img06 from "@/assets/imagens/06.webp";
+import img07 from "@/assets/imagens/07.webp";
+import img08 from "@/assets/imagens/08.webp";
+import img09 from "@/assets/imagens/09.webp";
+import img10 from "@/assets/imagens/10.webp";
+import img11 from "@/assets/imagens/11.webp";
+import img12 from "@/assets/imagens/12.webp";
+import perfil from "@/assets/imagens/perfil.JPG";
 
 function App() {
   const imagens = [
