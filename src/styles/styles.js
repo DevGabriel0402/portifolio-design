@@ -126,7 +126,7 @@ export const BadgeStyles = styled.div`
   }
 
   .foto{
-    width: 80px;
+    width: 50px;
     border-radius: 8px;
   }
 
